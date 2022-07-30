@@ -1,7 +1,7 @@
 function Wrapper() {
     return (
         <div className="wrapper">
-            <div className="overlay">
+            <div style={{display:'none'}} className="overlay">
                 <div className="drawer">
                     <h2>Корзина <img className="removeBtn" src="img/remove.svg" alt="remove" width={20} height={20}/></h2>
                     <div className="itemsDrawer">

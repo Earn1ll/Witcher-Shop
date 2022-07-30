@@ -164,6 +164,8 @@ header {
   z-index: 1;
 }
 .drawer {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 350px;
   height: 100%;
@@ -172,13 +174,21 @@ header {
   box-shadow: -10px 4px 24x rgba(0, 0, 0, 0.2);
   padding: 30px;
 
+  .itemsDrawer {
+    overflow: auto;
+    margin-bottom: 40px;
+  }
+
   h2 {
+    display: flex;
+    justify-content: space-between;
     margin: 0;
     margin-bottom: 30px;
     font-size: 24px;
   }
 
   .cartItem {
+    overflow: auto;
     border: 1px solid #f3f3f3;
     border-radius: 20px;
     overflow: hidden;
@@ -217,6 +227,65 @@ header {
   .footerBtn {
     li {
       display: flex;
+    }
+  }
+  .cartTotalBlock {
+    .greenButton {
+      position: relative;
+
+      &:hover {
+        img {
+          transform: translateX(5px);
+        }
+      }
+
+      img {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        transition: transform 0.2s ease-in-out;
+      }
+
+    ul {
+      display: block;
+      margin-bottom: 30px !important; ;
+      li {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+      }
+
+      div {
+        flex: 1;
+        height: 1px;
+        border-bottom: 1px dashed #dfdfdf;
+        position: relative;
+        top: -4px;
+        margin: 0 7px;
+      }
+
+
+      }
+    }
+    .greenButton {
+      width: 100%;
+      height: 55px;
+      background: #63dc43;
+      border-radius: 16px;
+      border: 0;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+
+      &:hover {
+        background: lighten(#63dc43, 7%);
+      }
+
+      &:active {
+        background: darken(#63dc43, 7%);
+      }
     }
   }
 }

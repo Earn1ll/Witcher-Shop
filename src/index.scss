@@ -230,6 +230,10 @@ header {
     }
   }
   .cartTotalBlock {
+    .summary {
+      display: flex;
+      justify-content: space-between;
+    }
     .greenButton {
       position: relative;
 
@@ -253,17 +257,17 @@ header {
         display: flex;
         align-items: flex-end;
         margin-bottom: 20px;
-      }
 
-      div {
-        flex: 1;
-        height: 1px;
-        border-bottom: 1px dashed #dfdfdf;
-        position: relative;
-        top: -4px;
-        margin: 0 7px;
-      }
+        div {
+          flex: 1;
+          height: 1px;
+          border-bottom: 1px dashed #dfdfdf;
+          position: relative;
+          top: -4px;
+          margin: 0 7px;
+        }
 
+      }
 
       }
     }

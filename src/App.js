@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Card from "./components/Card";
+import Header from "./components/Header";
+import Drawer from "./components/Drawer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function Wrapper() {
+    return (
+        <div className="wrapper">
+            <Drawer/>
+            <Header/>
+            <div className="content">
+                <div className="contentItem">
+                    <h1>Все аксессуары</h1>
+                    <div className="search-block">
+                        <img src="img/search.svg" alt="search" width={18} height={18} />
+                        <input type="text" placeholder="Поиск..." />
+                    </div>
+                </div>
+                <div className="items">
+                    <Card/>
+                </div>
+            </div>
+        </div>
+    );
 }
 
-export default App;
+export default Wrapper;
